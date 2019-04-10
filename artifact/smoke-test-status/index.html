@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/swarm-home/images/favicon.png" type="image/png">
+
+    <title>Smoke (end-to-end) test status :: Swarm Handbook</title>
+
+    
+    <link href="/swarm-home/css/nucleus.css?1554885023" rel="stylesheet">
+    <link href="/swarm-home/css/fontawesome-all.min.css?1554885023" rel="stylesheet">
+    <link href="/swarm-home/css/hybrid.css?1554885023" rel="stylesheet">
+    <link href="/swarm-home/css/featherlight.min.css?1554885023" rel="stylesheet">
+    <link href="/swarm-home/css/perfect-scrollbar.min.css?1554885023" rel="stylesheet">
+    <link href="/swarm-home/css/auto-complete.css?1554885023" rel="stylesheet">
+    <link href="/swarm-home/css/theme.css?1554885023" rel="stylesheet">
+    <link href="/swarm-home/css/hugo-theme.css?1554885023" rel="stylesheet">
+    
+      <link href="/swarm-home/css/theme-orange.css?1554885023" rel="stylesheet">
+    
+
+    <script src="/swarm-home/js/jquery-2.x.min.js?1554885023"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/swarm-home/artifact/smoke-test-status/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <p>Swarm Knowledge Base</p>
+<img src="/swarm-home/images/logo.png"/>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/swarm-home/js/lunr.min.js?1554885023"></script>
+<script type="text/javascript" src="/swarm-home/js/auto-complete.js?1554885023"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/swarm-home\/";
+    
+</script>
+<script type="text/javascript" src="/swarm-home/js/search.js?1554885023"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/swarm-home/artifact/" title="Artifacts" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/swarm-home/artifact/">
+          Artifacts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/swarm-home/artifact/smoke-test-status/" title="Smoke (end-to-end) test status" class="dd-item active">
+        <a href="/swarm-home/artifact/smoke-test-status/">
+        Smoke (end-to-end) test status
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/swarm-home/engineering/" title="Engineering" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/swarm-home/engineering/">
+          Engineering
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/swarm-home/handbook/" title="Handbook" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/swarm-home/handbook/">
+          Handbook
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/swarm-home/'></a> > <a href='/swarm-home/artifact/'>Artifacts</a> > Smoke (end-to-end) test status
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#the-ideal-state-of-the-end-to-end-tests-in-the-future-would-be">The ideal state of the end-to-end tests in the future would be</a></li>
+<li><a href="#current-state-of-the-end-to-end-tests">Current state of the end-to-end tests</a></li>
+<li><a href="#screenshots">Screenshots</a></li>
+<li><a href="#how-to-run-these-tests-on-your-own-environment">How to run these tests on your own environment?</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Smoke (end-to-end) test status
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>We have a few different types of smoke tests:</p>
+
+<ol>
+<li><strong>Upload speed</strong> smoke test</li>
+<li><strong>Upload and sync</strong> smoke test</li>
+<li><strong>Sliding window</strong> smoke test</li>
+<li><strong>Feed sync</strong> smoke test</li>
+<li><strong>PSS</strong> smoke test (in-progress)</li>
+</ol>
+
+<p>These are all meant to be long-running tests targetted at long-running environments (for example <code>staging-private</code>), so that we know that Swarm process does not have resource leaks, and so that we collect measurements in terms how long it takes to perform these tests on a given Swarm version/commit.</p>
+
+<h2 id="the-ideal-state-of-the-end-to-end-tests-in-the-future-would-be">The ideal state of the end-to-end tests in the future would be</h2>
+
+<ol>
+<li>Run all of them on a few long-running environments, such as <code>staging</code> and <code>staging-private</code>.</li>
+<li>Have these tests passing &gt;99% of the time.</li>
+<li>Be able to debug and understand why they failed in the small number of cases when they do fail.</li>
+<li>Have meaningful dashboards for all of them with past measurements (how long it took for the test to complete, how long it took to upload/download/sync, etc.)</li>
+<li>Send alerts to the <code>notifications</code> Gitter room when tests fail.</li>
+<li>Have a baseline of how much time tests take for a predefined set of parameters (network size, file size, sync delays, etc.).</li>
+</ol>
+
+<h2 id="current-state-of-the-end-to-end-tests">Current state of the end-to-end tests</h2>
+
+<ol>
+<li><p>The easiest test to handle is the <strong>Upload speed</strong> smoke test, which only uploads a file to a given node and measures how long it takes. Generally this test is successful 100% of the time for small files (such as 100KB, 1MB, 10MB, etc.) Obviously the bigger the file, the slower we upload it. We can improve the speed it takes to upload a file, but increasing the chunk size from 4KB, to larger sizes, such as 32KB or 64KB. We need to do more research on what the consequences of this would be. We haven&rsquo;t established a baseline of what we deem acceptable in terms of the upload speed, so that we measure this in terms of success/failure alerts, in case we introduce a regression.</p>
+
+<p>We have dashboards for this test, but no alerts.</p></li>
+
+<li><p>We have spent the most time on the <strong>Upload and sync</strong> smoke test, which uploads a file to node 0 and tries to download it after a certain delay (generally 30sec) from a random other node. This test has highlighted multiple issues with Swarm, and we still don&rsquo;t have it consistently passing for a larger period of time. Ideally we should get to the point where this test passes consistently for:</p>
+
+<ul>
+<li>timeframe: 7 days</li>
+<li>filesize: 10MB</li>
+<li>schedule: * * * * * * (every minute)</li>
+<li>network size: 50 swarm nodes</li>
+<li>store size for each node: 10000 chunks (* 4KB == 40MB)</li>
+</ul>
+
+<p>If we get there at least we have some basic confidence that garbage collection works and doesn&rsquo;t remove the most recently uploaded chunks.</p>
+
+<p>We have dashboards for this test, but no alerts.</p></li>
+
+<li><p><strong>Sliding window</strong> smoke test (probably we should rename it) sequentially uploads files 0, 1, 2, &hellip;, N, and on every upload tries to download all previously uploaded files (from 0 to N-1). The idea behind the test is to give us some intuition on the network capacity, as we have had bugs in the past where chunks have been synced to every single node in the network, essentially making the network capacity equal to one node&rsquo;s capacity.</p>
+
+<p>We don&rsquo;t have dashboards for this test.</p></li>
+
+<li><p>I haven&rsquo;t put any effort in running the <strong>Feed sync</strong> smoke test</p></li>
+</ol>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<p><img src="https://i.imgur.com/ETnz6NF.png" alt="" /></p>
+
+<p>Screenshot of the <strong>Upload and sync</strong> test, where we upload 4MB and 6MB files every 1 minute, showing no failures, as well as the upload and download times for the given files. You can see that there is a huge deviation in terms of the download time (between 3sec and 15sec), highlighting bugs in Swarm.</p>
+
+<hr />
+
+<p><img src="https://i.imgur.com/3XpfK44.png" alt="" /></p>
+
+<p>Screenshot of another <strong>Upload and sync</strong> test in another environment, where we upload 300KB and 500KB files. We see some failures in the dashboard, and we also see a huge deviation in terms of the download time for such small files.</p>
+
+<h2 id="how-to-run-these-tests-on-your-own-environment">How to run these tests on your own environment?</h2>
+
+<p>You can run your own Swarm deployment on K8s as you all know. The easiest way to do that is copy the configuration of the <code>staging-private</code> environment from <a href="https://github.com/ethersphere/release-staging">https://github.com/ethersphere/release-staging</a> and apply the configuration to your own <code>namespace</code> with <code>helmsman --apply -f your-namespace.yaml</code>.</p>
+
+<p>Make sure you update:
+1. network size
+2. chunk store size
+3. smoke test parameters (schedule, filesize, etc.)
+4. persistence</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/swarm-home/artifact/" title="Artifacts"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/swarm-home/engineering/" title="Engineering" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/swarm-home/js/clipboard.min.js?1554885023"></script>
+    <script src="/swarm-home/js/perfect-scrollbar.min.js?1554885023"></script>
+    <script src="/swarm-home/js/perfect-scrollbar.jquery.min.js?1554885023"></script>
+    <script src="/swarm-home/js/jquery.sticky.js?1554885023"></script>
+    <script src="/swarm-home/js/featherlight.min.js?1554885023"></script>
+    <script src="/swarm-home/js/html5shiv-printshiv.min.js?1554885023"></script>
+    <script src="/swarm-home/js/highlight.pack.js?1554885023"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/swarm-home/js/modernizr.custom.71422.js?1554885023"></script>
+    <script src="/swarm-home/js/learn.js?1554885023"></script>
+    <script src="/swarm-home/js/hugo-learn.js?1554885023"></script>
+
+    <link href="/swarm-home/mermaid/mermaid.css?1554885023" type="text/css" rel="stylesheet" />
+    <script src="/swarm-home/mermaid/mermaid.js?1554885023"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
